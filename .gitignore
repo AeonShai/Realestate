@@ -1,0 +1,30 @@
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Django SQLite database file
+db.sqlite3
+
+# Django migrations folder
+*/migrations/
+
+# Django static files (you might want to keep these in a separate repo for production)
+static/
+
+# Virtual environment folder
+myenv/
+
+# VSCode and IDE-specific files
+.vscode/
+.idea/
+
+# MacOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# .env files for environment variables
+.env
