@@ -1,0 +1,32 @@
+<!-- custom_admin/templates/custom_admin/ilan_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ilan Listesi</title>
+</head>
+<body>
+    <h1>Ilanlar</h1>
+    <a href="{% url 'ilan_add' %}">Yeni Ilan Ekle</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Başlık</th>
+                <th>Fiyat</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ilan in ilanlar %}
+                <tr>
+                    <td>{{ ilan.title }}</td>
+                    <td>{{ ilan.price }}</td>
+                    <td>
+                        <a href="{% url 'ilan_edit' ilan.pk %}">Düzenle</a> |
+                        <a href="{% url 'ilan_delete' ilan.pk %}">Sil</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

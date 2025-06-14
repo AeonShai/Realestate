@@ -1,0 +1,15 @@
+<!-- custom_admin/templates/custom_admin/ilan_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ilan Ekle/Düzenle</title>
+</head>
+<body>
+    <h1>İlan Ekle/Düzenle</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Kaydet</button>
+    </form>
+</body>
+</html>
